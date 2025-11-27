@@ -8,7 +8,23 @@ packages:
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: substractpackage
+  version: "2.0"
   gitServerName: src_shared_GitLabCtrl_Arti
   gitUrl: https://gitlab.com/ArtiKhareGitlabnew
   gitUsername: ArtiKhareGitlabnew
   gitBranch: master
+services:
+- serviceName: project.serengeti_gh_2711.integrations:gitlabfs
+  packages:
+  - name: Serengeti_GH_2711Project
+    version: "1.0"
+  - name: substractpackage
+    version: "2.0"
+- serviceName: SubstractPackage:substractFS
+  packages:
+  - name: substractpackage
+    version: "2.0"
+- serviceName: pub.math:subtractInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2070
